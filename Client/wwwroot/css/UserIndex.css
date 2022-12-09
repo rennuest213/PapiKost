@@ -1,0 +1,180 @@
+﻿body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    header ul {
+        display: flex;
+    }
+
+    header li {
+        margin-left: 2px;
+    }
+
+    header a {
+        color: rgb(248, 248, 201);
+        text-decoration: none !important;
+        font-size: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+        padding: 24px;
+    }
+
+    header nav a:hover {
+        color: aliceblue;
+        background-color: rgba(51, 47, 47, 0.8);
+        border-radius: 6px;
+    }
+
+#Logo a {
+    color: rgb(248, 248, 201);
+    font-size: 50px;
+    font-family: "Oleo Script", sans-serif;
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+#section1 {
+    height: 800px;
+    background-image: url("../lib/assets/img/HomeWallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#section1-content {
+    width: 900px;
+    background-color: rgba(51, 47, 47, 0.8);
+    text-align: center;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 8px;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+    translate: calc(50%,50%);
+}
+
+#h1-logo {
+    font-family: "Oleo Script", sans-serif;
+}
+
+#section1-content h1 {
+    color: rgb(248, 248, 201);
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+#section1-content p {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+#section1-content a {
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    color: rgba(51, 47, 47, 0.8);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+}
+
+    #section1-content a:hover {
+        background-color: aliceblue;
+    }
+
+#section2 {
+    padding: 24px;
+    background: linear-gradient(0deg,rgb(202,243,240),rgb(94, 205, 249));
+}
+
+    #section2 h2 {
+        text-align: center;
+        color: rgb(59, 65, 64);
+        font-size: 40px;
+        margin: 24px 0;
+    }
+
+#rekomendasi {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.rekomendasi-kost {
+    margin: 0 20px;
+}
+
+    .rekomendasi-kost img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 2px 4px 8px rgb(68, 68, 67);
+    }
+
+    .rekomendasi-kost p {
+        text-align: center;
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+footer {
+    background: linear-gradient(70deg,rgb(24,24,24), rgb(25,29,29));
+    padding-bottom: 36px;
+    padding-top: 5px;
+}
+
+    footer h2 {
+        color: white;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer li {
+        text-align: center;
+        height: 80px;
+        width: 80px;
+        margin: 0 20px;
+    }
+
+    footer img {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer p {
+        color: white;
+        margin: 5px 0;
+    }

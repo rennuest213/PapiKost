@@ -1,0 +1,108 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "adminLayout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/DetailsKost.css" />
+</head>
+<body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createKostan">Create New</button>
+    <div class="modal fade" id="createKostan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Kost</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="createKost">
+                        <p>Name: </p><input type="text" class="form-control" id="name">
+                        <p>Harga: </p><input type="text" class="form-control" id="harga">
+                        <p>Jenis: </p><input type="text" class="form-control" id="jenis">
+                        <p>Alamat: </p><input type="text" class="form-control" id="alamat">
+                        <p>Spesifikasi: </p><input type="text" class="form-control" id="spesifikasi">
+                        <p>Keterangan: </p><input type="text" class="form-control" id="keterangan">
+                        <p>Image Kost: </p><input type="text" class="form-control" id="image">
+                        <p>Pemilik ID: </p><input type="text" class="form-control" id="pemilik">
+                        <p></p>
+                        @*<p>Pemilik Kost: </p><input type="text" class="form-control" id="pemilikName">
+                        <p>Pemilik Email: </p><input type="text" class="form-control" id="pemilikEmail">
+                        <p>Pemilik NoHp: </p><input type="text" class="form-control" id="pemilikNoHp">
+                        <p>Pemilik Alamat: </p><input type="text" class="form-control" id="pemilikAlamat">*@
+
+
+                        <button type="button" class="btn btn-primary" id="createBtn" onclick="create()">Save changes</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <table class="table" id="tableKost">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Harga
+                </th>
+                <th>
+                    Jenis
+                </th>
+                <th>
+                    Alamat
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <div class="modal fade" id="detailsKost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Kost</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tampilDetails">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editKost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Kost</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tampilEdit">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

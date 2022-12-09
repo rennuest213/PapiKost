@@ -1,0 +1,13 @@
+﻿
+.modal-body {
+    text-align: left;
+}
+
+    .modal-body img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .modal-body h2 {
+        margin: 20px;
+    }

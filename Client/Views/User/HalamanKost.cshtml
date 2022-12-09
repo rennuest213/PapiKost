@@ -1,0 +1,193 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Kost</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/UserIndex.css">
+    <link rel="stylesheet" href="~/css/HalamanKost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="Logo">
+            <a href="https://localhost:7149/User/Index">PapiKost</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://localhost:7149/User/HalamanKost"><strong>Temukan Kost</strong></a></li>
+                <li><a href=""><strong>Tentang Kami</strong></a></li>
+                <li><a href="https://localhost:7149/"><strong>Log Out</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ul id="list-kost">
+            @*<li>
+                <img src="https://drive.google.com/uc?id=1L5avtApndrjya-CbDbP00C0ObHGiAxCb" alt="Kost Bob">
+                <div class="item-content">
+                    <div class="content">
+                        <h2>Kost Bob</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo animi ullam sed doloremque tempora ...
+                        </p>
+                    </div>
+                    <div class="actions">
+                        <a href="" data-toggle="modal" data-target="#detailKost">Selengkapnya &#x2192</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://drive.google.com/uc?id=1GkM4LGqRVXy6tohXm8gClAtumageYjB_" alt="Kost Mikhael">
+                <div class="item-content">
+                    <div>
+                        <h2>Kost Mikhael</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo animi ullam sed doloremque tempora ...
+                        </p>
+                    </div>
+                    <div class="actions">
+                        <a href="">Selengkapnya &#x2192</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://drive.google.com/uc?id=1WHoh9ong6h22CHK1PAml7349oxVmIQg5" alt="Kost Ronald">
+                <div class="item-content">
+                    <div>
+                        <h2>Kost Ronald</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                            vitae incidunt eos atque dicta natus quam accusantium placeat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                            vitae incidunt eos atque dicta natus quam accusantium placeat.
+                        </p>
+                    </div>
+                    <div class="actions">
+                        <a href="">Selengkapnya &#x2192</a>
+                    </div>
+                </div>
+            </li>*@
+        </ul>
+    </main>
+    <footer>
+        <h2>Jangan Lupa Follow:</h2>
+        <ul>
+            <li>
+                <a href="http://www.instagram.com" target="_blank">
+                    <img src="~/lib/assets/img/insta.png" alt="Instagram">
+                    <p><strong>Instagram</strong></p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.facebook.com" target="_blank">
+                    <img src="~/lib/assets/img/facebook.png" alt="Facebook">
+                    <p><strong>Facebook</strong></p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.tiktok.com" target="_blank">
+                    <img src="~/lib/assets/img/tiktok.png" alt="TikTok">
+                    <p><strong>TikTok</strong></p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailKost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Detail Kost</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="tampilDetails">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        //console.log("Test");
+        $(document).ready(function () {
+            $.ajax({
+                url: 'https://localhost:7073/api/Kost',
+                headers: {
+                    'Authorization': "Bearer " + sessionStorage.getItem("token"),
+                }
+            }).done((res) => {
+                console.log(res);
+                let temp = "";
+                $.each(res.data, function (key, val) {
+                    temp += `<li>
+                                <img src="${val.image}" alt="${val.name}">
+                                <div class="item-content">
+                                    <div class="content">
+                                        <h2>${val.name}</h2>
+                                        <p>
+                                            ${val.keterangan}
+                                        </p>
+                                    </div>
+                                    <div class="actions">
+                                                <a href="" data-toggle="modal" data-target="#detailKost" onclick="detailsKost('${val.id}')">Selengkapnya &#x2192</a>
+                                    </div>
+                                </div>
+                            </li>`;
+                });
+                $("#list-kost").html(temp);
+            });
+        });
+
+        function detailsKost(id) {
+            $.ajax({
+                url: `https://localhost:7073/api/Kost/${id}`,
+                //dataSrc: 'data',
+                headers: {
+                    'Authorization': "Bearer " + sessionStorage.getItem("token"),
+                },
+
+                type: "GET",
+            }).done((res) => {
+                let temp = "";
+                temp += `
+                                                        
+                                                        
+                                                        <p>Name: </p><input type="text" class="form-control" id="kostName" readonly placeholder="${res.data.name}" value="${res.data.name}">
+                                                        <p>Harga: </p><input type="text" class="form-control" id="hargaKost" readonly placeholder="${res.data.harga}" value="${res.data.harga}">
+                                                        <p>Jenis: </p><input type="text" class="form-control" id="jenisKost" readonly placeholder="${res.data.jenis}" value="${res.data.jenis}">
+                                                        <p>Alamat: </p><input type="text" class="form-control" id="alamatKost" readonly placeholder="${res.data.alamat}" value="${res.data.alamat}">
+                                                        <p>Spesifikasi: </p><input type="text" class="form-control" id="spesifikasiKost" readonly placeholder="${res.data.spesifikasi}" value="${res.data.spesifikasi}">
+                                                        <p>Keterangan: </p><input type="text" class="form-control" id="keteranganKost" readonly placeholder="${res.data.keterangan}" value="${res.data.keterangan}">
+                                                        <p>Image: </p><img src="${res.data.image}" alt="Kost Bob">
+                                                        `;
+                $("#tampilDetails").html(temp);
+                console.log(res);
+            }).fail((err) => {
+                console.log(err);
+            });
+        }
+
+    </script>
+
+</body>
+</html>

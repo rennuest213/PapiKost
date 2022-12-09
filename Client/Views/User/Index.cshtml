@@ -1,0 +1,104 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Papikos</title>
+    <link rel="stylesheet" href="~/css/UserIndex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="Logo">
+            <a href="https://localhost:7149/User/Index">PapiKost</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://localhost:7149/User/HalamanKost"><strong>Temukan Kost</strong></a></li>
+                <li><a href=""><strong>Tentang Kami</strong></a></li>
+                <li><a href="https://localhost:7149/"><strong>Log Out</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="section1">
+            <div id="section1-content">
+                <h1>Selamat Datang di <span id="h1-logo">PapiKost</span></h1>
+                <p>Temukan Kost Impianmu!</p>
+                <a href="https://localhost:7149/User/HalamanKost">Jelajah Kost</a>
+            </div>
+        </section>
+        <section id="section2">
+            <h2>Rekomendasi Kami</h2>
+            <ul id="rekomendasi">
+                @*<li class="rekomendasi-kost">
+                    <img src="https://drive.google.com/uc?id=1L5avtApndrjya-CbDbP00C0ObHGiAxCb" alt="Kost Bob">
+                    <p><strong>Kost Bob</strong></p>
+                </li>
+                <li class="rekomendasi-kost">
+                    <img src="https://drive.google.com/uc?id=1GkM4LGqRVXy6tohXm8gClAtumageYjB_" alt="Kost Mikhael">
+                    <p><strong>Kost Mikhael</strong></p>
+                </li>
+                <li class="rekomendasi-kost">
+                    <img src="https://drive.google.com/uc?id=1WHoh9ong6h22CHK1PAml7349oxVmIQg5" alt="Kost Ronald">
+                    <p><strong>Kost Ronald</strong></p>
+                </li>*@
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <h2>Jangan Lupa Follow:</h2>
+        <ul>
+            <li>
+                <a href="http://www.instagram.com" target="_blank">
+                    <img src="~/lib/assets/img/insta.png" alt="Instagram">
+                    <p><strong>Instagram</strong></p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.facebook.com" target="_blank">
+                    <img src="~/lib/assets/img/facebook.png" alt="Facebook">
+                    <p><strong>Facebook</strong></p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.tiktok.com" target="_blank">
+                    <img src="~/lib/assets/img/tiktok.png" alt="TikTok">
+                    <p><strong>TikTok</strong></p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        //console.log("Test");
+        $(document).ready(function () {
+            $.ajax({
+                url: 'https://localhost:7073/api/Kost',
+                headers: {
+                    'Authorization': "Bearer " + sessionStorage.getItem("token"),
+                }
+            }).done((res) => {
+                console.log(res);
+                let temp = "";
+                $.each(res.data, function (key, val) {
+                    if (key < 3){
+                        temp += `<li class="rekomendasi-kost">
+                                        <img src="${val.image}" alt="Kost Bob">
+                                        <p><strong>${val.name}</strong></p>
+                                    </li>`;
+                    }
+                        
+                });
+                $("#rekomendasi").html(temp);
+            });
+        });
+    </script>
+
+</body>
+</html>
